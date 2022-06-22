@@ -1,5 +1,5 @@
-Directory = 'clearo'; 
-Directory2 = 'clearo'; 
+Directory = '‪C:\Evaluation\clearo'; %Name of the first directory that is the one containing the deblurred images.
+Directory2 = '‪C:\Evaluation\clear';  %Name of the first directory that is the one containing the original images.
 % Read images from Images folder
 Imgs = dir(Directory);
 Imgs2=dir(Directory2);
@@ -19,9 +19,11 @@ for j=1:length(Imgs)
 %     figure, imshow(thisfile2);
 %       title(thisname2);
 %      % title(thisname2);
-%      
+% 
+%Code for SSIM
 ssimval = ssim(Img2,Img);
-%peaksnr = psnr(Img2,Img)  
+%Code for PSNR
+peaksnr = psnr(Img2,Img)  
 fprintf('\n The PSNR value is %0.4f',ssimval);
 %fprintf(peaksnr);
    catch
