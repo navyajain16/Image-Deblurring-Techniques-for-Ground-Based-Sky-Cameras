@@ -1,5 +1,5 @@
-Directory = '‪C:\Evaluation\clearo'; %Name of the first directory that is the one containing the deblurred images.
-Directory2 = '‪C:\Evaluation\clear';  %Name of the first directory that is the one containing the original images.
+Directory = 'C:\Evaluation\clearo'; %Name of the first directory that is the one containing the deblurred images.
+Directory2 = 'C:\Evaluation\clear';  %Name of the first directory that is the one containing the original images.
 % Read images from Images folder
 Imgs = dir(Directory);
 Imgs2=dir(Directory2);
