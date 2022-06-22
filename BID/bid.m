@@ -2,18 +2,15 @@
 % consistency in results.
 rng default;
 
-%Adding Gaussian blur synthetically
-I = 'C:\Evaluation\veil'; % name of the directory containing images
+%Read image
+I = imread('C:\Evaluation\veil.png'); % name of the image
+
+%%Create a PSF that represents a Gaussian blur with standard deviation 5 and filter of size 5-by-5.
 PSF = fspecial('gaussian',5,10);
-V = .0001;
-BlurredNoisy = imnoise(imfilter(I,PSF),'gaussian',0,V);
 
-
-% Create a weight array to specify which pixels are included in processing.
-WT = zeros(size(I));
-WT(5:end-4,5:end-4) = 1;
-INITPSF = ones(size(PSF));
+%Simulate blur in the image.
+blurred = imfilter(I,PSF,'symmetric','conv');
 
 % Perform blind image deconvolution
-[J P] = deconvblind(BlurredNoisy,INITPSF,20,10*sqrt(V),WT);
+[J P] = deconvblind(blurred,PSF,20,10*sqrt(V),WT);
 
