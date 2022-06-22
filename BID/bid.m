@@ -2,7 +2,8 @@
 % consistency in results.
 rng default;
 
-I = 'C:\Evaluation\veil'; % name of the directory containing blurred images
+%Adding Gaussian blur synthetically
+I = 'C:\Evaluation\veil'; % name of the directory containing images
 PSF = fspecial('gaussian',5,10);
 V = .0001;
 BlurredNoisy = imnoise(imfilter(I,PSF),'gaussian',0,V);
