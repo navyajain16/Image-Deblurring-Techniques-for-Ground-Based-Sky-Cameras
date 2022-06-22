@@ -24,5 +24,6 @@ This project was tested on `python 3.8` and MATLAB 2021b.
 + `DGAN(2018)`: This folder contains the code for deblurring images using DeblurGAN. This code was picked up from https://github.com/KupynOrest/DeblurGAN. This repo does not contain the model weights and the dataset used for training DeblurGAN. For the model weights and dataset kindly visit the link provided above.
 + `DSD(2019)`: This folder contains the code for deblurring images using Parameter Selective Sharing and Nested Skip Connections. This code was picked up from https://github.com/firenxygao/deblur. This repo does not contain the model weights and the dataset used for training Parameter Selective Sharing and Nested Skip Connections. For the model weights and dataset kindly visit the link provided above.
 + `MPRNet`: This folder contains the code for deblurring images using MPRNet. This code was picked up from https://github.com/swz30/MPRNet. This repo does not contain the model weights and the dataset used for training MPRNet. For the model weights and dataset kindly visit the link provided above.
++ `Metrics.m`: This file contains the code for PSNR and SSIM metrics used for objective evaluation of the images.
 
 ### References
