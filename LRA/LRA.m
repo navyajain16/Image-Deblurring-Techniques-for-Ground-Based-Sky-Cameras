@@ -9,13 +9,7 @@ PSF = fspecial('gaussian',5,5);
 %Simulate blur in the image.
 blurred = imfilter(I,PSF,'symmetric','conv');
 
-%Add simulated zero-mean Gaussian noise.
-V = 0.002;
-blurred_noisy = imnoise(blurred,'gaussian',0,V);
-imshow(blurred_noisy)
-title('Blurred and Noisy Image')
-
 %Use deconvlucy to restore the blurred and noisy image.
-luc1 = deconvlucy(blurred_noisy,PSF,5);
+luc1 = deconvlucy(blurred,PSF,5);
 imshow(luc1)
 title('Restored Image')
