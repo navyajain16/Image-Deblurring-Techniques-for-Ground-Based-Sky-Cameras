@@ -1,7 +1,7 @@
 # Image-Deblurring-Techniques-for-Ground-Based-Sky-Cameras
 With the spirit of reproducible research, this repository contains all the codes required to produce the results in the manuscript:
 
-> N. Jain, M. Jain, and S. Dev, Image Deblurring Techniques for Ground Based Sky Cameras (Accepted)
+> N. Jain, M. Jain, and S. Dev, Image Deblurring Techniques for Ground Based Sky Cameras, *Remote Sensing Applications: Society and Environment*, 2022.
 
 ### Dataset
 In this paper we have used Singapore Whole‐sky Imaging Categories (SWIMCAT) dataset [1]. The dataset consists of $784$ cloud images classified into 5 classes, namely, clear sky, pattern clouds, thick dark clouds, thick white clouds, and veil clouds of size 125X125 pixels.
